@@ -350,6 +350,18 @@ static const struct ramtron_parts_s g_ramtron_parts[] =
     RAMTRON_EMULATE_PAGE_SIZE     /* chunksize */
 #endif
   },
+  {
+    "MB85RS256TY",                /* name */
+    0x25,                         /* id1 */
+    0x03,                         /* id2 */
+    32L * 1024L,                  /* size */
+    2,                            /* addr_len */
+    25000000                      /* speed */
+#ifdef CONFIG_RAMTRON_CHUNKING
+    , false,                      /* chunked */
+    RAMTRON_EMULATE_PAGE_SIZE     /* chunksize */
+#endif
+  },
 #ifdef CONFIG_RAMTRON_CHUNKING
   {
     "MB85AS4MT",                  /* name */
